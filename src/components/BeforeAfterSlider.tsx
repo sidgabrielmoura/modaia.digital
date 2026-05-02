@@ -67,7 +67,6 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
         handleMove(e.touches[0].clientX);
       }}
     >
-      {/* After Image (Background) */}
       <Image
         src={afterImage}
         alt="Foto com IA (Depois)"
@@ -76,7 +75,6 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
         priority
       />
 
-      {/* Before Image (Clipped using clip-path) */}
       <div
         className="absolute inset-0"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
@@ -90,7 +88,6 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
         />
       </div>
 
-      {/* Slider Line & Handle */}
       <div
         className="absolute top-0 bottom-0 w-[2px] bg-white cursor-ew-resize z-10 shadow-[0_0_10px_rgba(0,0,0,0.5)]"
         style={{ left: `calc(${sliderPosition}%)` }}
@@ -103,7 +100,6 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
         </div>
       </div>
 
-      {/* Labels */}
       <div className="absolute top-6 left-6 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full text-xs font-medium text-white border border-white/10 z-0">
         Foto Original (Celular)
       </div>
